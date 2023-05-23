@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.movilesparcial.ui.hotel.home.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_add2"
+            app:destination="@id/add2" />
+        <action
+            android:id="@+id/action_home2_to_descripcion"
+            app:destination="@id/descripcion" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.movilesparcial.ui.hotel.add.Add"
+        android:label="Add" />
+    <fragment
+        android:id="@+id/descripcion"
+        android:name="com.example.movilesparcial.ui.hotel.Descripcion"
+        android:label="Descripcion" />
+</navigation>
