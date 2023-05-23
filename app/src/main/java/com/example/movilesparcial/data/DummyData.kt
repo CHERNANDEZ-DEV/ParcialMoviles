@@ -1,5 +1,3 @@
-package com.example.laboratorio_08.data
-
 import com.example.laboratorio_08.data.model.HotelModel
 
 //model 01
