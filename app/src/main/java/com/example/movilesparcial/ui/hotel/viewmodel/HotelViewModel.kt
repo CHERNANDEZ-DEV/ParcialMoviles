@@ -33,7 +33,7 @@ class HotelViewModel (private val repository: HotelRepository): ViewModel() {
 
     private fun addHotel (hotel: HotelModel) = repository.setHoteles(hotel)
 
-    fun createMovie(){
+    fun createHotel(){
         if(!validateData()){
            // status.value = WRONG_INFORMATION
             return

@@ -1,82 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.movie.MovieFragment"
-    android:background="@color/backgroundLayout"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="@dimen/w_image"
-        android:layout_height="@dimen/h_image"
-        android:layout_marginTop="@dimen/n_gap"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+    <data>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/n_gap"
-        android:layout_marginTop="@dimen/e_gap"
-        android:layout_marginEnd="@dimen/n_gap"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        <variable
+            name="viewmodel"
+            type="com.example.movilesparcial.ui.hotel.viewmodel.HotelViewModel" />
+    </data>
 
-        <TextView
-            android:id="@+id/textViewTest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/sizeText"
-            android:text="@string/SWtitle"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="@dimen/sizeTextM"
-            android:textAlignment="center"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.movie.MovieFragment"
+        android:background="@color/backgroundLayout"
+        >
+
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/n_gap"
-            android:orientation="horizontal">
+            android:layout_marginStart="@dimen/n_gap"
+            android:layout_marginEnd="@dimen/n_gap"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textViewTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/xl_gap"
-                android:layout_weight="2"
-                android:text="Ciencia Ficcion"
+                android:layout_marginBottom="@dimen/sizeText"
+                android:text="@{viewmodel.nombre}"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="@dimen/sizeText"/>
+                android:textSize="@dimen/sizeTextM"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView4"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/SWcalification"
-                android:textColor="@color/calification"
-                android:textSize="@dimen/textSizeLG"/>
+                android:layout_marginBottom="@dimen/n_gap"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{viewmodel.ubicacion}"
+                    android:textColor="@color/calification"
+                    android:textSize="@dimen/textSizeLG" />
+            </LinearLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/SWdescription"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sizeTextM"
-            android:textAlignment="center"/>
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

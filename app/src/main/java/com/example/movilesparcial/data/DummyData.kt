@@ -12,5 +12,5 @@ const val ubicacion2 = "San Salvador"
 
 var hoteles = mutableListOf(
     HotelModel(nombre, ubicacion),
-    HotelModel(nombre2, ubicacion2),
+    HotelModel(nombre2, ubicacion2)
 )
