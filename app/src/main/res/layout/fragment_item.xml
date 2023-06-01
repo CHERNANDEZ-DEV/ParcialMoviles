@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardBackgroundColor="@color/cardLayout"
+        app:cardBackgroundColor="#333333"
         app:cardCornerRadius="@dimen/gap"
         tools:context=".ui.movie.billboard.recyclerview.MovieItemFragment">
 
@@ -49,17 +49,17 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:textSize="22sp"
-                    tools:text="Harry Potter y la piedra filosofal" />
+                    tools:text="" />
 
                 <TextView
                     android:id="@+id/text_view_qualification"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/cardLayout"
-                    android:textColor="@color/calification"
+                    android:background="#A4A4A4"
+                    android:textColor="#ffffff"
                     android:textSize="22sp"
                     android:textStyle="bold"
-                    tools:text="9.5" />
+                    tools:text="" />
             </LinearLayout>
         </LinearLayout>
 
