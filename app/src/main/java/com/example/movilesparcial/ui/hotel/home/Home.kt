@@ -73,7 +73,7 @@ class Home : Fragment() {
         findNavController().navigate(R.id.action_home2_to_descripcion)
     }
 
-    private fun displayMovies(){
+    private fun displayHotele(){
         adapter.setData(hotelViewModel.getHoteles())
         adapter.notifyDataSetChanged()
     }
@@ -85,7 +85,7 @@ class Home : Fragment() {
         }
 
         binding.recyclerView.adapter = adapter
-        displayMovies()
+        displayHotele()
     }
 
 

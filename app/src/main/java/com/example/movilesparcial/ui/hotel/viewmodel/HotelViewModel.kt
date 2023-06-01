@@ -12,6 +12,7 @@ import com.example.movilesparcial.ui.hotel.HotelReviewerApplication
 class HotelViewModel (private val repository: HotelRepository): ViewModel() {
     val nombre = MutableLiveData("")
     val ubicacion = MutableLiveData("")
+    val status = MutableLiveData("")
 
     //logical on back
     private var screenNumber: Int = 0
@@ -35,7 +36,7 @@ class HotelViewModel (private val repository: HotelRepository): ViewModel() {
 
     fun createHotel(){
         if(!validateData()){
-           // status.value = WRONG_INFORMATION
+           status.value = WRONG_INFORMATION
             return
         }
         val hotel = HotelModel(
@@ -45,7 +46,7 @@ class HotelViewModel (private val repository: HotelRepository): ViewModel() {
         addHotel(hotel)
         clearData()
 
-        //status.value = MOVIE_CREATED
+        status.value = HOTEL_CREATED
     }
 
     private fun validateData(): Boolean{
@@ -61,7 +62,7 @@ class HotelViewModel (private val repository: HotelRepository): ViewModel() {
         ubicacion.value = ""
     }
     fun clearStatus(){
-        //status.value = INACTIVE
+        status.value = INACTIVE
     }
 
     fun setSelectedHotel(hotel: HotelModel){
